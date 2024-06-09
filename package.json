@@ -10,18 +10,26 @@
     "preview": "vite preview",
     "lint": "eslint src",
     "fix:lint": "eslint src --fix",
-    "fix:prettier": "prettier . --write"
+    "fix:prettier": "prettier . --write",
+    "test": "vitest",
+    "watch:test": "vitest --watch"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20.14.2",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
     "@typescript-eslint/parser": "^7.12.0",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "prettier": "^3.3.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "happy-dom": "^14.12.0",
+    "prettier": "^3.3.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.13",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@types/chrome": "^0.0.268"
