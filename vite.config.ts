@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import { crx, defineManifest } from '@crxjs/vite-plugin';
 import { PluginOption } from 'vite';
@@ -28,8 +29,8 @@ const manifest = defineManifest({
   },
   content_scripts: [
     {
-      matches: ['https://jp.mercari.com/*'],
-      js: ['src/content/index.ts'],
+      matches: ['https://jp.mercari.com/todos'],
+      js: ['src/content/todos/index.ts'],
     },
   ],
   action: {
@@ -42,5 +43,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    setupFiles: 'vitest-setup.ts',
   },
 });
